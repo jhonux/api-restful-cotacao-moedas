@@ -16,3 +16,27 @@ Parâmetros:
 base: Moeda de origem (opcional, padrão: EUR)
 
 symbols: Moeda de destino (opcional, padrão: BRL).
+
+2. POST /cotacao
+Esse endpoint permite registrar manualmente uma cotação de uma moeda. A cotação é armazenada em um cache de memória e fica disponível no histórico.
+
+URL: /cotacao
+
+Método HTTP: POST
+
+Body (JSON):
+
+base: Moeda de origem
+
+moeda: Moeda de destino
+
+cotacao: Valor da cotação
+
+data: Data da cotação.
+
+3. GET /historico
+Esse endpoint retorna todas as cotações registradas no cache de memória.
+
+URL: /historico
+
+Método HTTP: GET
